@@ -4,3 +4,16 @@ Thu 13 Apr 2023 03:56:11 PM UTC:
  tests:  1|5
 total_score: 10/70
 a453bd8
+Thu 13 Apr 2023 04:04:07 PM UTC: 
+ hashmap.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:46:5: error: expected expression before ‘{’ token
+   46 |     {
+      |     ^
+hashmap.c:51:1: error: expected expression before ‘}’ token
+   51 | }
+      | ^
+Compilation failed
+1104fe8
