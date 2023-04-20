@@ -81,11 +81,13 @@ Pair * searchMap(HashMap * map,  char * key)
   long encontrado = 0; 
   for(long i=0 ; i < map->capacity ; i++) 
   {
-    if(strcmp(key,map->buckets[i]->key)==0)
-    {
-      map->current = i;
-      encontrado = 1;
-    break;
+    if(map->buckets[i] != NULL && map->buckets[i]->key != NULL){
+      if(strcmp(key,map->buckets[i]->key)==0)
+      {
+        map->current = i;
+        encontrado = 1;
+      break;
+      }
   }
   if(encontrado)
   {
