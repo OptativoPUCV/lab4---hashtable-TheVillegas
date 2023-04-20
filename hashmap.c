@@ -80,7 +80,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 
   for(long i=0 ; i < map->capacity ; i++) 
   {
-    if(strcmp(key,map->buckets[i])==0)
+    if(strcmp(key,map->buckets[i]->key)==0)
     {
       map->current = key
       return map->buckets[i];
