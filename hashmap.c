@@ -83,7 +83,7 @@ Pair * searchMap(HashMap * map,  char * key) {
   {
     if(Buscado == map->buckets[i])
     {
-      mapa->current = Buscado;
+      map->current = Buscado;
       return Buscado;
     }
     else

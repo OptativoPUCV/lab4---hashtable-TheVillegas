@@ -42,3 +42,22 @@ hashmap.c:87:14: error: returning ‘long int’ from a function with return typ
 cc1: all warnings being treated as errors
 Compilation failed
 708e594
+Thu 20 Apr 2023 05:42:25 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:84:16: error: comparison between pointer and integer [-Werror]
+   84 |     if(Buscado == map->buckets[i])
+      |                ^~
+hashmap.c:87:14: error: returning ‘long int’ from a function with return type ‘Pair *’ makes pointer from integer without a cast [-Werror=int-conversion]
+   87 |       return Buscado;
+      |              ^~~~~~~
+hashmap.c:91:10: error: ‘mapa’ undeclared (first use in this function); did you mean ‘map’?
+   91 |       if(mapa->buckets[i] == NULL)
+      |          ^~~~
+      |          map
+hashmap.c:91:10: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+Compilation failed
+72d1213
