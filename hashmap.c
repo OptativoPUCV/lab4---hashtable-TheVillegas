@@ -76,8 +76,8 @@ void eraseMap(HashMap * map,  char * key) {
 
 }
 
-Pair * searchMap(HashMap * map,  char * key) {   
-
+Pair * searchMap(HashMap * map,  char * key) 
+{   
   for(long i=0 ; i < map->capacity ; i++) 
   {
     if(strcmp(key,map->buckets[i]->key)==0)
@@ -93,9 +93,6 @@ Pair * searchMap(HashMap * map,  char * key) {
       }
     }
   }
-
-  
-
 
 }
 
