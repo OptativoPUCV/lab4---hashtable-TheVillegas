@@ -81,7 +81,7 @@ Pair * searchMap(HashMap * map,  char * key) {
   long Buscado = hash(key,map->capacity);
   for(long i=0 ; i < map->capacity ; i++) 
   {
-    if(Buscado == map->buckets[i])
+    if(strcmp(Buscado,map->buckets[i])==0)
     {
       map->current = Buscado;
       return map->buckets[i];
