@@ -115,3 +115,30 @@ In file included from test.c:3:
 cc1: all warnings being treated as errors
 Compilation failed
 fc6bab9
+Thu 20 Apr 2023 05:59:20 PM UTC: 
+ hashmap.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:83:31: error: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+   83 |     if(strcmp(key,map->buckets[i])==0)
+      |                   ~~~~~~~~~~~~^~~
+      |                               |
+      |                               Pair *
+In file included from test.c:3:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/string.h:156:50: note: expected ‘const char *’ but argument is of type ‘Pair *’
+  156 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+In file included from test.c:4:
+hashmap.c:85:20: error: assignment to ‘long int’ from ‘char *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   85 |       map->current = key
+      |                    ^
+hashmap.c:85:25: error: expected ‘;’ before ‘return’
+   85 |       map->current = key
+      |                         ^
+      |                         ;
+   86 |       return map->buckets[i];
+      |       ~~~~~~             
+cc1: all warnings being treated as errors
+Compilation failed
+c7a2e5b

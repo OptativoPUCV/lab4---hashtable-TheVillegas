@@ -78,12 +78,11 @@ void eraseMap(HashMap * map,  char * key) {
 
 Pair * searchMap(HashMap * map,  char * key) {   
 
-  long Buscado = hash(key,map->capacity);
   for(long i=0 ; i < map->capacity ; i++) 
   {
-    if(strcmp(Buscado,map->buckets[i])==0)
+    if(strcmp(key,map->buckets[i])==0)
     {
-      map->current = Buscado;
+      map->current = key
       return map->buckets[i];
     }
     else
