@@ -159,3 +159,14 @@ hashmap.c:85:25: error: expected ‘;’ before ‘return’
 cc1: all warnings being treated as errors
 Compilation failed
 75a7caf
+Thu 20 Apr 2023 05:59:48 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:85:20: error: assignment to ‘long int’ from ‘char *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   85 |       map->current = key;
+      |                    ^
+cc1: all warnings being treated as errors
+Compilation failed
+cc10aa4
