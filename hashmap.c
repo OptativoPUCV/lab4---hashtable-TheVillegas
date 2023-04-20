@@ -88,7 +88,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     }
     else
     {
-      if(mapa->buckets[i] == NULL)
+      if(map->buckets[i] == NULL)
       {
         return NULL;
       }
