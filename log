@@ -170,3 +170,8 @@ hashmap.c:85:20: error: assignment to ‘long int’ from ‘char *’ makes int
 cc1: all warnings being treated as errors
 Compilation failed
 cc10aa4
+Thu 20 Apr 2023 06:05:44 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+1bc6239
