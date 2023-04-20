@@ -105,7 +105,3 @@ Pair * firstMap(HashMap * map) {
     return NULL;
 }
 
-Pair * nextMap(HashMap * map) {
-
-    return NULL;
-}
