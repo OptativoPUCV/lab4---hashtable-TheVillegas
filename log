@@ -501,3 +501,9 @@ hashmap.c:117:8: note: previous definition of ‘firstMap’ with type ‘Pair *
       |        ^~~~~~~~
 Compilation failed
 d515547
+Fri 21 Apr 2023 04:02:23 AM UTC: 
+ hashmap.c | 12 +-----------
+ 1 file changed, 1 insertion(+), 11 deletions(-)
+ tests:  15|2
+total_score: 50/70
+c0d7fc9
