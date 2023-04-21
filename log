@@ -489,3 +489,15 @@ Fri 21 Apr 2023 04:00:38 AM UTC:
  tests:  15|2
 total_score: 50/70
 3f8b9ee
+Fri 21 Apr 2023 04:01:55 AM UTC: 
+ hashmap.c | 23 +++++++++++++++--------
+ 1 file changed, 15 insertions(+), 8 deletions(-)
+In file included from test.c:4:
+hashmap.c:130:8: error: redefinition of ‘firstMap’
+  130 | Pair * firstMap(HashMap * map) {
+      |        ^~~~~~~~
+hashmap.c:117:8: note: previous definition of ‘firstMap’ with type ‘Pair *(HashMap *)’ {aka ‘Pair *(struct HashMap *)’}
+  117 | Pair * firstMap(HashMap * map) {
+      |        ^~~~~~~~
+Compilation failed
+d515547
