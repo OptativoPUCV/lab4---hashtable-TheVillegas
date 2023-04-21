@@ -144,6 +144,6 @@ Pair * nextMap(HashMap * map) {
     }
     nextIndice = (nextIndice +1) % map->capacity;
   }
-  
+  return NULL;
  
 }
