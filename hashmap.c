@@ -75,11 +75,13 @@ void eraseMap(HashMap * map,  char * key) {
   
   for(long i=0 ; i < map->capacity ; i++) 
     {
-      if(strcmp(key,map->buckets[i]->key)==0)
+      if(map->buckets[i] != NULL && map->buckets[i]->key != NULL)
       {
-        map->buckets[i] = NULL;
-      }
-        
+        if(strcmp(key,map->buckets[i]->key)==0)
+        {
+          map->buckets[i] = NULL;
+        }
+      } 
     }
 
 
