@@ -558,3 +558,14 @@ Fri 21 Apr 2023 04:08:45 AM UTC:
  tests:  13|2
 total_score: 50/70
 1b366f6
+Fri 21 Apr 2023 02:46:51 PM UTC: 
+ hashmap.c | 14 +++-----------
+ 1 file changed, 3 insertions(+), 11 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:130:9: error: unused variable ‘nextIndice’ [-Werror=unused-variable]
+  130 |   long  nextIndice = (map->current + 1) & map->capacity;
+      |         ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+94a50fc
