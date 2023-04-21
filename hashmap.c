@@ -128,18 +128,24 @@ Pair * firstMap(HashMap * map) {
   return NULL;
 }
 Pair * nextMap(HashMap * map) {
-    if (map->current == -1) { // Si el índice actual es -1, no se ha llamado a firstMap
-    return NULL;
-  }
 
-  for (long i = map->current + 1; i < map->capacity; i++) { // Buscar el siguiente Pair válido a partir del índice actual
-    if (map->buckets[i] != NULL && map->buckets[i]->key != NULL) {
-      map->current = i; // Actualizar el índice actual
-      return map->buckets[i];
+Pair * nextMap(HashMap * map) {
+
+  if (map->current == -1)
+  {
+      return NULL;
+  }
+  long  nextIndice = (map->current + 1) & map->capacity;
+  for (long i=nextIndice ; i != map->current; i = (i+1) % map->capacity)
+    {
+      if(map->buckets[i] != NULL && map->buckets[i]->key != NULL)
+      {
+        map->current = i;
+        return map->buckets[i];
+      }
     }
-  }
 
-  map->current = -1; // Si no se encontró ningún Pair válido, reiniciar el índice actual a -1
+  map->current = -1;
   return NULL;
 }
 
