@@ -80,6 +80,7 @@ void eraseMap(HashMap * map,  char * key) {
         if(strcmp(key,map->buckets[i]->key)==0)
         {
           map->buckets[i]->key = NULL;
+          break;
         }
       } 
     }
