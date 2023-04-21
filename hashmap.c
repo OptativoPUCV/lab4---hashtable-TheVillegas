@@ -71,7 +71,16 @@ HashMap * createMap(long capacity) {
     
 }
 
-void eraseMap(HashMap * map,  char * key) {    
+void eraseMap(HashMap * map,  char * key) {   
+  
+  for(long i=0 ; i < map->capacity ; i++) 
+    {
+      if(strcmp(key,map->buckets[i]->key)==0)
+      {
+        map->buckets[i] = NULL;
+      }
+        
+    }
 
 
 }
