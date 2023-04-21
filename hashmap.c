@@ -130,5 +130,10 @@ Pair * firstMap(HashMap * map) {
 
 Pair * nextMap(HashMap * map) {
 
-    return NULL;
+    if (map->current == -1)
+    {
+      return map->buckets[1];
+    }
+  long  nextIndice = map->current + 1;
+  return map->buckets[nextIndice];
 }
