@@ -65,7 +65,7 @@ void enlarge(HashMap * map) {
   Pair * pair = old_buckets[i];
     if(pair != NULL && pair->key != NULL)
     {
-      insertMap(map, pair-key, pair->value);
+      insertMap(map, pair->key, pair->value);
     }
   }
   
