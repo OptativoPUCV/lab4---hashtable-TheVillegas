@@ -128,17 +128,18 @@ Pair * firstMap(HashMap * map) {
   return NULL;
 }
 Pair * nextMap(HashMap * map) {
-
-   if (map->current == -1) {
-    return NULL;
+  if (map->current == -1) {
+      return map->buckets[1];
   }
   long nextIndice = (map->current + 1) % map->capacity;
-  for (long i=nextIndice ; i != map->current; i = (i+1) % map->capacity) {
-    if(map->buckets[i] != NULL && map->buckets[i]->key != NULL) {
+  for (long i = nextIndice; i != map->current; i = (i + 1) % map->capacity) {
+    if (map->buckets[i] != NULL && map->buckets[i]->key != NULL) {
       map->current = i;
       return map->buckets[i];
     }
   }
+  map->current = -1; 
   return NULL;
 }
+
 
