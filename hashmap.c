@@ -135,5 +135,14 @@ Pair * nextMap(HashMap * map) {
       return map->buckets[1];
     }
   long  nextIndice = map->current + 1;
-  return map->buckets[nextIndice];
+  while(nextIndice != map->current)
+    {
+      if(map->buckets[nextIndice] != NULL && map->buckets[nextIndice]->key != NULL)
+      {
+        map->current = nextIndice;
+        return map->buckets[nextIndice];
+      }
+      nextIndice = (nextIndice +1) % map->capacity;
+    }
+  return NULL;
 }
