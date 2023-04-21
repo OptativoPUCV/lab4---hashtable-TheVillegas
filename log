@@ -569,3 +569,9 @@ hashmap.c:130:9: error: unused variable ‘nextIndice’ [-Werror=unused-variabl
 cc1: all warnings being treated as errors
 Compilation failed
 94a50fc
+Fri 21 Apr 2023 02:47:05 PM UTC: 
+ hashmap.c | 2 --
+ 1 file changed, 2 deletions(-)
+ tests:  11|2
+total_score: 50/70
+37c4ab3

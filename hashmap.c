@@ -126,8 +126,6 @@ Pair * nextMap(HashMap * map) {
   {
       return NULL;
   }
-  
-  long  nextIndice = (map->current + 1) & map->capacity;
   for (long i=map->current +1  ; i <  map->capacity; i++)
     {
       if(map->buckets[i] != NULL && map->buckets[i]->key != NULL)
