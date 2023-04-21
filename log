@@ -448,3 +448,14 @@ Fri 21 Apr 2023 03:49:54 AM UTC:
  tests:  15|2
 total_score: 50/70
 1e95455
+Fri 21 Apr 2023 03:51:44 AM UTC: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:149:1: error: control reaches end of non-void function [-Werror=return-type]
+  149 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+47d4154

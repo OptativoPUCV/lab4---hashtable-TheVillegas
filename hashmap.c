@@ -130,19 +130,20 @@ Pair * firstMap(HashMap * map) {
 
 Pair * nextMap(HashMap * map) {
 
-    if (map->current == -1)
-    {
+  if (map->current == -1)
+  {
       return map->buckets[1];
-    }
+  }
   long  nextIndice = map->current + 1;
   while(nextIndice != map->current)
+  {
+    if(map->buckets[nextIndice] != NULL && map->buckets[nextIndice]->key != NULL)
     {
-      if(map->buckets[nextIndice] != NULL && map->buckets[nextIndice]->key != NULL)
-      {
-        map->current = nextIndice;
-        return map->buckets[nextIndice];
-      }
-      nextIndice = (nextIndice +1) % map->capacity;
+      map->current = nextIndice;
+      return map->buckets[nextIndice];
     }
-  return NULL;
+    nextIndice = (nextIndice +1) % map->capacity;
+  }
+  
+ 
 }
