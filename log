@@ -581,3 +581,15 @@ Fri 21 Apr 2023 02:48:21 PM UTC:
  tests:  16|1
 total_score: 60/70
 635c438
+Fri 21 Apr 2023 03:10:26 PM UTC: 
+ hashmap.c | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:68:27: error: ‘key’ undeclared (first use in this function); did you mean ‘key_t’?
+   68 |       insertMap(map, pair-key, pair->value);
+      |                           ^~~
+      |                           key_t
+hashmap.c:68:27: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+1d43f51
